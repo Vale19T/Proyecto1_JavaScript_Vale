@@ -1,0 +1,103 @@
+
+*{
+    /*Margen*/
+    margin:0;
+    padding: 0;
+    /*Tamaño de la caja*/
+    box-sizing: border-box;
+    /*Tipografia*/
+    font-family: sans-serif;
+}
+
+body{
+    /*El min-height es para definir la altura minima de un elemento*/
+    min-height: 100vh;
+    background-color: rgb(180, 163, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora{
+    background-color: rgb(202, 174, 242);
+    color: gray;
+    /*Organiza la cuadricula en el numero que uno desee en este caso 4*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 350px;
+    padding: 1rem;
+    /*1rem es considerado 16px*/
+    border-radius: 1rem;
+    /*El gap es el espacio entre los elementos internos, en este caso el espacio entre los botones*/
+    /*0.5rem es 8 px*/
+    gap: 0.5rem;
+}
+
+.pantalla{
+    grid-column: 1/5;
+    background-color: rgb(247, 236, 236);
+    padding: 1rem;
+    font-size: 3rem;
+    text-align: right;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.boton{
+    background-color: rgb(247, 236, 236);
+    color: gray;
+    border: 0;
+    padding: 1rem;
+    font-size: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*El . indica que es 0.8rem que es lo mismo de .8rem*/
+    border-radius: .9rem;
+    /*Al momento de pasar sobre un boton con el cursor se ponga la manita*/
+    cursor: pointer;
+}
+
+/*Esta parte se utiliza para que al momento de seleccionar un boton este cambie de color*/
+.boton:hover{
+    background-color: gray;
+    color: rgb(247, 236, 236);
+}
+
+/*Se llama con el # porque se esta llamando desde el ID*/
+#cero{
+    /*Se expande el tamaño del boton Cero*/
+    grid-column: span 2;
+}
+
+#igual{
+    grid-row: span 2;
+    background-color: rgb(156, 70, 238);
+    color: rgb(247, 236, 236);
+}
+
+#igual:hover{
+    background-color: rgb(247, 236, 236);
+    color: rgb(130, 105, 154);
+}
+
+#limpiar{
+    background-color: rgb(156, 70, 238);
+    color: rgb(247, 236, 236)
+}
+
+#limpiar:hover{
+    background-color: rgb(247, 236, 236);
+    color: rgb(130, 105, 154);
+}
+
+#eliminar{
+    background-color: rgb(156, 70, 238);
+    color:rgb(247, 236, 236)
+}
+
+#eliminar:hover{
+    background-color: rgb(247, 236, 236);
+    color: rgb(130, 105, 154);
+}
